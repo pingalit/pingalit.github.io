@@ -1,0 +1,14 @@
+.cBorder {
+    border: 1px; 
+    border-color: #000000; 
+    border-style: solid; 
+    border-radius: 10px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
