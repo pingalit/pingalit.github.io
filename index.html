@@ -2,24 +2,27 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Theja Ram Pingali</title>
   <meta name="description" content="Resume">
   <meta name="author" content="Theja Ram Pingali">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="animation.js"></script>
+
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style> @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap'); </style>
+
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -30,21 +33,34 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      text-align: center;
+      margin: auto;
+      width: 100vw;
+      overflow: hidden;
+      cursor: default;
     }
+
+    h1 {
+      letter-spacing: 20px;
+      font-family: 'Nunito', sans-serif;
+      color: rgba(240, 248, 255, 0.332);
+      display: flex;
+      text-align: center;
+    }
+
+
   </style>
 
-  <script src="animation.js"></script>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body>
+<body style="background-color: rgb(27, 28, 33); justify-content: center;">
   <div class="center">
-    <h1 style="vertical-align: middle; letter-spacing: 10px; font-family: Nunito;">Theja Ram Pingali</h1>
+      <h1>Theja Ram Pingali</h1>
+      <!-- <h5 style="text-align: center; letter-spacing: 80px; color: rgba(58, 58, 110, 0.734);">Night Sky</h5> -->
   </div>
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="sketch-holder"></div>
+<!-- End Document –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
