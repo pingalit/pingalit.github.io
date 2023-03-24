@@ -1,5 +1,5 @@
-const numFlowers = 10;
-const flowers = [];
+const numStars = 10;
+const startField = [];
 const mouse_gravity_area = 10;
 let count = 0;
 let starArr = [];
@@ -7,7 +7,7 @@ let starArr = [];
 function setup() {
     createCanvas(windowWidth, windowHeight*0.99);
     for (let i = 0; i < random(1000, 5000); i++) {
-        flowers.push(new Flower(random(width * 2 - width / 2), random(height * 2 - height / 2)));
+        startField.push(new Star(random(width * 2 - width / 2), random(height * 2 - height / 2)));
         count++;
     }
     setTimeout(createVectors, 10000)
@@ -17,10 +17,18 @@ function createVectors() {
     if(count < random(2000, 5000))
     {
         for (let i = 0; i < random(1000, 1500); i++) {
-            flowers.push(new Flower(random(width * 2 - width / 2), random(height * 2 - height / 2)));
+            startField.push(new Star(random(width * 2 - width / 2), random(height * 2 - height / 2)));
             count++;
         }
         console.log("Create new stars")
+    }
+    else
+    {
+        for (let i = 0; i < random(1000, startField.length); i++) {
+            startField.slice(Math.floor(Math.random() * startField.length), 1);
+            count--;
+        }
+        console.log("Deleting old stars")
     }
     console.log(count)
     setTimeout(createVectors, 10000)
@@ -28,7 +36,7 @@ function createVectors() {
 
 function draw() {
     background('#1b1c21');
-    for (const flower of flowers) {
+    for (const flower of startField) {
         flower.update();
         flower.display();
     }
@@ -52,7 +60,7 @@ function windowResized() {
     resizeCanvas(windowWidth*0.99, windowHeight*0.99);
   }
 
-class Flower {
+class Star {
     constructor(x, y) {
       this.x = x;
       this.y = y;
